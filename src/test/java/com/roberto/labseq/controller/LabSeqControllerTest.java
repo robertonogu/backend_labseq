@@ -6,8 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.math.BigInteger;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LabSeqControllerTest {
@@ -19,11 +17,11 @@ public class LabSeqControllerTest {
         ResponseEntity<?> responseEntity = labSeqController.getValueFromSequence(5);
 
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals(1L, responseEntity.getBody());
+        assertEquals("1E0", responseEntity.getBody());
     }
 
     @Test
-    public void testNegativeInput() {
+    public void testNegativeIndex() {
         LabSeqController labSeqController = new LabSeqController(new LabSeqService());
 
         ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> {
