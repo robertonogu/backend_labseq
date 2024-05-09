@@ -43,11 +43,11 @@ If there are any doubts regarding specific issues of the exercise that may influ
 
 ## Tech Stack
 
-JDK 17
-Spring Boot 3.2.5
-Angular 15.0.5
-JUnit 5.10.2
-Docker 26.0.0
+- JDK 17
+- Spring Boot 3.2.5
+- Angular 15.0.5
+- JUnit 5.10.2
+- Docker 26.0.0
 
 ## Implementation
 
