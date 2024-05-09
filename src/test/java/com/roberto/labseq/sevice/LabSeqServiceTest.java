@@ -31,8 +31,6 @@ public class LabSeqServiceTest {
         LabSeqService labSeqService = new LabSeqService();
 
         // Test case for negative input
-        assertThrows(ResponseStatusException.class, () -> {
-            labSeqService.getValueFromSequence(-1);
-        });
+        assertThrows(ResponseStatusException.class, () -> labSeqService.getValueFromSequence(-1));
     }
 }

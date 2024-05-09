@@ -24,9 +24,7 @@ public class LabSeqControllerTest {
     public void testNegativeIndex() {
         LabSeqController labSeqController = new LabSeqController(new LabSeqService());
 
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> {
-            labSeqController.getValueFromSequence(-1);
-        });
+        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> labSeqController.getValueFromSequence(-1));
 
         assertEquals(HttpStatus.BAD_REQUEST, exception.getStatusCode());
         assertEquals("Index should be a non-negative integer number.", exception.getReason());
